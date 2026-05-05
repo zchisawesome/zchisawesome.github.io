@@ -5,6 +5,21 @@ p{
     font-family: "Arial Narrow", Arial, sans-serif;
     font-stretch: condensed;
 }
+html{
+    background: linear-gradient(120deg, orange, purple, green, blue, cyan, magenta, teal);
+    background-size: 300% 300%;
+    min-height: 100%;
+    animation: rollingGrad 10s ease infinite;
+}
+@keyframes rollingGrad{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+body{
+    margin:1%;
+    padding:1%;
+}
 h1{
     text-align: justify;
     -moz-text-align-last: justify;
@@ -13,6 +28,7 @@ h1{
     font-stretch: condensed;
     font-size:50px;
     filter: blur(1px);
+    text-shadow: 0 0 .2em gold;
 }
 h2{
     text-align: justify;
@@ -21,6 +37,8 @@ h2{
     font-family: "Arial Narrow", Arial, sans-serif;
     font-stretch: condensed;
     font-weight: 400;
+    text-shadow: 0 0 .2em gold;
+    
 }
 
 .center{
