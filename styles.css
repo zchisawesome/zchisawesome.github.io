@@ -1,59 +1,177 @@
-p{
-    text-align: justify;
-    -moz-text-align-last: justify;
-    text-align-last: justify;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
-}
-html{
+/* html {
     background: linear-gradient(120deg, orange, purple, green, blue, cyan, magenta, teal);
     background-size: 300% 300%;
     min-height: 100%;
     animation: rollingGrad 10s ease infinite;
-}
-@keyframes rollingGrad{
-    0%{background-position: 0% 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0% 50%;}
-}
-body{
-    margin:1%;
-    padding:1%;
-}
-h1{
-    text-align: justify;
-    -moz-text-align-last: justify;
-    text-align-last: justify;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
-    font-size:50px;
-    filter: blur(1px);
-    text-shadow: 0 0 .2em gold;
-}
-h2{
-    text-align: justify;
-    -moz-text-align-last: justify;
-    text-align-last: justify;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-stretch: condensed;
-    font-weight: 400;
-    text-shadow: 0 0 .2em gold;
-    
+} */
+
+/* @keyframes rollingGrad {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+* {
+    box-sizing: border-box;
 }
 
-.center{
+body {
+    margin: 0;
+    padding: 28px;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    background: rgba(6, 6, 6, 0.92);
+}
+
+.workspace {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .workspace {
+        flex-direction: column;
+    }
+    .content-panel {
+        width: 100%;
+    }
+}
+
+.terminal {
+    display: inline-block;
+    background: rgba(6, 6, 6, 0.92);
+    border: 1px solid #223322;
+    border-radius: 4px;
+    padding: 20px 28px 24px 20px;
+    color: #aaffaa;
+    min-width: 280px;
+    box-shadow:
+        0 0 18px rgba(0, 200, 0, 0.12),
+        0 0 60px rgba(0, 80, 0, 0.06);
+}
+
+.root-label {
+    color: #77ffaa;
+    font-size: 1.05em;
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+
+.tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 18px;
+    border-left: 1px solid #1a321a;
+}
+
+.tree > ul {
+    padding-left: 6px;
+    border-left: none;
+}
+
+.tree li {
+    padding: 1px 0;
+    position: relative;
+}
+
+.tree ul li::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 11px;
+    width: 14px;
+    border-top: 1px solid #1a321a;
+}
+
+.row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 2px solid black;
-    height: 50px;
-    width: 150px;
-    
-}
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 5px;
+    cursor: pointer;
+    padding: 2px 6px 2px 2px;
+    border-radius: 2px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.row:hover {
+    background: rgba(0, 255, 80, 0.06);
+}
+
+.caret {
+    color: #336633;
+    font-size: 0.6em;
+    width: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    display: inline-block;
+    transition: color 0.1s, transform 0.15s;
+}
+
+.open > .row .caret {
+    transform: rotate(90deg);
+}
+
+.row:hover .caret {
+    color: #55dd55;
+}
+
+.label {
+    color: #66ddff;
+}
+
+.tree li > a {
+    display: block;
+    color: #99ee99;
+    text-decoration: none;
+    padding: 2px 6px 2px 17px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+.tree li > a:hover {
+    background: rgba(0, 255, 80, 0.06);
+    color: #00ff88;
+}
+
+.empty {
+    color: #2a4a2a;
+    padding: 2px 6px 2px 17px;
+    white-space: nowrap;
+}
+
+.tree li > a.active {
+    color: #00ff88;
+    background: rgba(0, 255, 80, 0.08);
+}
+
+/* ── content panel ── */
+
+.content-panel {
+    background: rgba(6, 6, 6, 0.92);
+    border: 1px solid #223322;
+    border-radius: 4px;
+    min-width: 260px;
+    max-width: 480px;
+    box-shadow:
+        0 0 18px rgba(0, 200, 0, 0.12),
+        0 0 60px rgba(0, 80, 0, 0.06);
+    overflow: hidden;
+}
+
+.panel-title {
+    color: #66ddff;
+    padding: 8px 16px;
+    border-bottom: 1px solid #1a321a;
+    font-size: 0.9em;
+}
+
+.panel-body {
+    color: #aaffaa;
+    padding: 16px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 0.95em;
 }

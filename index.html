@@ -1,93 +1,131 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
 <html>
     <head>
         <title>C A L E V I S I O N</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>welcome to my website ! :]</h1>
-        <h2>. &#10023; . &#9734; . editing portfolio . . &#9733; . . &#9734; . . .</h2>
-        <div class="grid">
-            <div class="center", style="background-color:dodgerblue;"><a href="https://youtu.be/ayatJkgfs4A">
-                clowning around
-            </a></div>
-            <div class="center", style="background-color:lightblue;"><a href="https://youtu.be/fZRHk5dm8h8">
-                immensity of vacancy
-            </a></div>
-            <div class="center", style="background-color:lightgrey;"><a href="https://www.instagram.com/reel/DXkkLCRjVDu/">
-                cicada fest
-            </a></div>
-            <div class="center", style="background-color:slateblue;"><a href="https://www.instagram.com/reel/DVQzviajVAJ/">
-                cicada: house of blues
-            </a></div>
-            <div class="center", style="background-color:silver"><a href="https://youtu.be/vKrxuS-ozpQ">
-                the line
-            </a></div>
-            <div class="center", style="background-color:fuchsia;"><a href="https://youtu.be/Z4WPKUh0VNY">
-                signals
-            </a></div>
-            <br>
+        <div class="workspace">
+        <div class="terminal">
+            <div class="tree">
+                <div class="root-label">&#128193; calevision/</div>
+                <ul>
+                    <li class="folder">
+                        <div class="row" onclick="toggle(this)">
+                            <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">filmmakingPortfolio/</span>
+                        </div>
+                        <ul hidden>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">editing/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="https://youtu.be/rYoJ-6ZbP08" target="_blank">&#128196; yo yo springs</a></li>
+                                    <li><a href="https://youtu.be/Ox47MDJVjII" target="_blank">&#128196; freakshow</a></li>
+                                    <li><a href="https://youtu.be/ayatJkgfs4A" target="_blank">&#128196; clowning around</a></li>
+                                    <li><a href="https://youtu.be/fZRHk5dm8h8" target="_blank">&#128196; immensity of vacancy</a></li>
+                                    <li><a href="https://www.instagram.com/reel/DXkkLCRjVDu/" target="_blank">&#128196; cicada fest</a></li>
+                                    <li><a href="https://www.instagram.com/reel/DVQzviajVAJ/" target="_blank">&#128196; cicada: house of blues</a></li>
+                                    <li><a href="https://youtu.be/vKrxuS-ozpQ" target="_blank">&#128196; the line</a></li>
+                                    <li><a href="https://youtu.be/Z4WPKUh0VNY" target="_blank">&#128196; signals</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">directing/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="https://youtu.be/Ox47MDJVjII" target="_blank">&#128196; freakshow</a></li>
+                                    <li><a href="https://youtu.be/3sLbEi-poP4" target="_blank">&#128196; automaton</a></li>
+                                    <li><a href="https://archive.org/details/king-in-yellow" target="_blank">&#128196; the king in yellow</a></li>
+                                    <li><a href="https://youtu.be/siSMROUyRpk" target="_blank">&#128196; picture by picture</a></li>
+                                    <li><a href="https://youtu.be/nSfhR3jxr3Q" target="_blank">&#128196; forbidden fruit</a></li>
+                                    <li><a href="https://youtu.be/RzOIp_pmXPc" target="_blank">&#128196; we'll fix it in post</a></li>
+                                    <li><a href="https://youtu.be/gun_cIZt8uo" target="_blank">&#128196; glass*</a></li>
+                                    <li><a href="https://youtu.be/eV95f7vietc" target="_blank">&#128196; filmmakers in the making</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">productionDesign/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="https://youtu.be/Ox47MDJVjII" target="_blank">&#128196; freakshow</a></li>
+                                    <li><a href="https://youtu.be/3sLbEi-poP4" target="_blank">&#128196; automaton</a></li>
+                                    <li><a href="https://youtu.be/ayatJkgfs4A" target="_blank">&#128196; clowning around</a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=ALJUZDitvvQ" target="_blank">&#128196; you any good?</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">cinematography/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="https://youtu.be/rYoJ-6ZbP08" target="_blank">&#128196; yo yo springs</a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=ghk8KYCQ8G8" target="_blank">&#128196; errand boy</a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=AC91JEjG7IA" target="_blank">&#128196; murdering mr. stromberg</a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=4wGL4F101As" target="_blank">&#128196; still you</a></li>
+                                    <li><a href="https://youtu.be/ayatJkgfs4A" target="_blank">&#128196; clowning around</a></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">producing/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="https://youtu.be/fZRHk5dm8h8" target="_blank">&#128196; immensity of vacancy</a></li>
+                                    <li><a href="https://youtu.be/Ox47MDJVjII" target="_blank">&#128196; freakshow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.instagram.com/campgroundpictures/" target="_blank">&#128196; campground pictures</a></li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <div class="row" onclick="toggle(this)">
+                            <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">art/</span>
+                        </div>
+                        <ul hidden>
+                            <li class="empty">&#128196; (coming soon)</li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" onclick="openFile('contact.md',event)">&#128196; contact.md</a></li>
+                    <li><a href="./README.html" onclick="openFile('README.md',event)">&#128196; README.md</a></li>
+                    
+                </ul>
+            </div>
         </div>
-        <h2>&#9734; . . &#9733; . . &#9733; . . . directing portfolio . . . &#10023; . . &#9733; . .</h2>
-        <div class="grid">
-            <div class="center", style="background-color: palegreen;"><a href="https://youtu.be/Ox47MDJVjII">
-                freakshow (coming soon)
-            </a></div>
-            <div class="center", style="background-color:mintcream;"><a href="https://archive.org/details/king-in-yellow">
-                the king in yellow
-            </a></div>
-            <div class="center", style="background-color:chartreuse;"><a href="https://youtu.be/siSMROUyRpk">
-                picture by picture (coming soon)
-            </a></div>
-            <div class="center", style="background-color:greenyellow;"><a href="https://youtu.be/nSfhR3jxr3Q">
-                forbidden fruit
-            </a></div>
-            <div class="center", style="background-color:olive;"><a href="https://youtu.be/RzOIp_pmXPc">
-                we'll fix it in post
-            </a></div>
-            <div class="center", style="background-color:goldenrod;"><a href="https://youtu.be/gun_cIZt8uo">
-                glass*
-            </a></div>
-            <br>
+
+        <div class="content-panel" id="content-panel" hidden>
+            <div class="panel-body" id="panel-body"></div>
         </div>
-        <h2>. . &#9734; . &#9733; . production design portfolio . . &#10023; . &#9734; . . . .</h2>
-        <div class="grid">
-            <div class="center", style="background-color:mediumvioletred;"><a href="https://youtu.be/ayatJkgfs4A">
-                clowning around
-            </a></div>
-            <div class="center", style="background-color:indianred;"><a href="https://www.youtube.com/watch?v=ALJUZDitvvQ">
-                you any good?
-            </a></div>
-            <div class="center", style="background-color:salmon;"><a href="https://youtu.be/Ox47MDJVjII">
-                freakshow (coming soon)
-            </a></div>
-            <br>
-        </div>
-        <h2>. &#9733; . &#9734; . &#10023; . . &#10023; . director of photography portfolio . . . &#10023; . . &#10023; .</h2>
-        <div class="grid">
-            <div class="center", style="background-color:orangered;"><a href="https://www.youtube.com/watch?v=ghk8KYCQ8G8">
-                errand boy
-            </a></div>
-            <div class="center", style="background-color:orange;"><a href="https://www.instagram.com/p/DXAcM-slKFG/?img_index=1">
-                yo yo springs (coming soon)
-            </a></div>
-            <div class="center", style="background-color:crimson;"><a href="https://www.youtube.com/watch?v=AC91JEjG7IA">
-                murdering mr. stromberg
-            </a></div>
-            <div class="center", style="background-color:beige;"><a href="https://www.youtube.com/watch?v=4wGL4F101As">
-                still you
-            </a></div>
-            <div class="center", style="background-color:firebrick;"><a href="https://youtu.be/ayatJkgfs4A">
-                clowning around
-            </a></div>
-            <br>
-        </div>
-        <!-- <h2>. . &#10023; . . &#9733; . . coding stuff (ew) . . &#9734; . &#9733; &#10023; . . .</h2>
-        <div class="grid">
-            <div class="center", style="background-color: palegreen;"><a href="https://github.com/zchisawesome">
-                github
-            </a></div>
-            <br>
-        </div> -->
+
+        </div><!-- end .workspace -->
+
+        <script>
+            const fileContent = {
+                'README.md': "Unless otherwise stated, all of my work that I've independently published to this site is under the Creative Commons Attribution 4.0 International license.\nRead more about this license at https://creativecommons.org/licenses/by/4.0/.",
+                'contact.md': "contact\n------------\ninstagram: @calevision_\n"
+            };
+
+            function openFile(name, e) {
+                e.preventDefault();
+                document.getElementById('panel-body').textContent = fileContent[name] || '(empty)';
+                const panel = document.getElementById('content-panel');
+                panel.hidden = false;
+                document.querySelectorAll('.tree li > a').forEach(a => a.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+            }
+        </script>
+
+        <script>
+            function toggle(row) {
+                const li = row.parentElement;
+                const ul = li.querySelector('ul');
+                const isOpen = li.classList.contains('open');
+                li.classList.toggle('open', !isOpen);
+                ul.hidden = isOpen;
+            }
+        </script>
     </body>
 </html>
