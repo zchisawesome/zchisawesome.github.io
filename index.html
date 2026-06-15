@@ -86,7 +86,16 @@
                             <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">art/</span>
                         </div>
                         <ul hidden>
-                            <li class="empty">&#128196; (coming soon)</li>
+                            <li class="folder">
+                                <div class="row" onclick="toggle(this)">
+                                    <span class="caret">&#9658;</span><span class="icon">&#128193;</span><span class="label">entropy/</span>
+                                </div>
+                                <ul hidden>
+                                    <li><a href="./Entropy/Forward.html" onclick="openHtmlFile('./Entropy/Forward.html', event)">&#128196; Forward.html</a></li>
+                                    <li><a href="./Entropy/AM_Research_Collective.html" onclick="openHtmlFile('./Entropy/AM_Research_Collective.html', event)">&#128196; AM_Research_Collective.html</a></li>
+                                    <li><a href="./Entropy/Eve.html" onclick="openHtmlFile('./Entropy/Eve.html', event)">&#128196; Eve.html</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" onclick="openFile('contact.md',event)">&#128196; contact.md</a></li>
@@ -100,17 +109,34 @@
             <div class="panel-body" id="panel-body"></div>
         </div>
 
-        </div><!-- end .workspace -->
+        </div>
 
         <script>
             const fileContent = {
                 'README.md': "Unless otherwise stated, all of my work that I've independently published to this site is under the Creative Commons Attribution 4.0 International license.\nRead more about this license at https://creativecommons.org/licenses/by/4.0/.",
-                'contact.md': "contact\n------------\ninstagram: @calevision_\n"
+                'contact.md': "contact\n------------\ninstagram: @calevision_\nemail: caleb@cale.vision\n"
             };
 
             function openFile(name, e) {
                 e.preventDefault();
-                document.getElementById('panel-body').textContent = fileContent[name] || '(empty)';
+                const body = document.getElementById('panel-body');
+                body.textContent = fileContent[name] || '(empty)';
+                body.style.padding = '';
+                const panel = document.getElementById('content-panel');
+                panel.hidden = false;
+                document.querySelectorAll('.tree li > a').forEach(a => a.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+            }
+
+            function openHtmlFile(src, e) {
+                e.preventDefault();
+                const body = document.getElementById('panel-body');
+                body.textContent = '';
+                body.style.padding = '0';
+                const iframe = document.createElement('iframe');
+                iframe.src = src;
+                iframe.style.cssText = 'width:100%;height:70vh;border:none;display:block;';
+                body.appendChild(iframe);
                 const panel = document.getElementById('content-panel');
                 panel.hidden = false;
                 document.querySelectorAll('.tree li > a').forEach(a => a.classList.remove('active'));
